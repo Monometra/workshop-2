@@ -102,8 +102,4 @@ Mostrar promedios finales
 > [!TIP]  
 > Puedes modificar el número de participantes cambiando el `Para i ← 1 Hasta 10` por una variable `n` que se lea al inicio del programa.
 
-> [!IMPORTANT]  
-> PSeInt usa `:0:2` para mostrar dos decimales.  
-> Si tu versión no lo soporta, usa `Redondear(valor, 2)` o imprime sin formato.
-
 ---
