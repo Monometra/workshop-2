@@ -1,23 +1,23 @@
 Algoritmo TestNavette
 	// Programa para 10 participantes - 20 m como se espicifico en el archivo subido por el profesor
-
+	
 	Definir nombre Como Caracter
 	Definir edad, nivel, shuttle, i Como Entero
 	Definir V, VO2_simple, VO2_leger Como Real
 	Definir suma_VO2_simple, suma_VO2_leger Como Real
 	Definir clasificacion Como Caracter
-
+	
 	suma_VO2_simple <- 0
 	suma_VO2_leger <- 0
-
+	
 	Escribir "--- Test Course Navette (20 m)---"
 	Escribir ""
-
+	
 	Para i <- 1 Hasta 10 Hacer
 		Escribir "Participante número ", i
 		Escribir "Nombre: "
 		Leer nombre
-
+		
 		Repetir
 			Escribir "Edad (años, > 0): "
 			Leer edad
@@ -25,7 +25,7 @@ Algoritmo TestNavette
 				Escribir "Edad inválida. Debe ser mayor que 0. Intente de nuevo."
 			FinSi
 		Hasta Que edad > 0
-
+		
 		Repetir
 			Escribir "Nivel alcanzado (L) (entero >= 1): "
 			Leer nivel
@@ -33,7 +33,7 @@ Algoritmo TestNavette
 				Escribir "Nivel inválido. Debe ser >= 1. Intente de nuevo."
 			FinSi
 		Hasta Que nivel >= 1
-
+		
 		Repetir
 			Escribir "Shuttle dentro del nivel (S) (entero >= 0): "
 			Leer shuttle
@@ -41,11 +41,11 @@ Algoritmo TestNavette
 				Escribir "Shuttle inválido. Debe ser >= 0. Intente de nuevo."
 			FinSi
 		Hasta Que shuttle >= 0
-
+		
 		V <- 8 + 0.5 * nivel
 		VO2_simple <- 3.46 * V + 12.2
 		VO2_leger <- 31.025 + (3.238 * V) - (3.248 * edad) + (0.1536 * V * edad)
-
+		
 		Si VO2_simple < 35 Entonces
 			clasificacion <- "Baja"
 		Sino
@@ -59,27 +59,27 @@ Algoritmo TestNavette
 				FinSi
 			FinSi
 		FinSi
-
+		
 		Escribir "------------------------------"
 		Escribir "Participante: ", nombre
 		Escribir "Edad: ", edad, " años"
 		Escribir "Nivel alcanzado: ", nivel
 		Escribir "Shuttle: ", shuttle
-		Escribir "Velocidad final (V): ", V:0:2, " km/h"
-		Escribir "VO2 simple: ", VO2_simple:0:2, " ml/kg/min"
-		Escribir "VO2 Léger: ", VO2_leger:0:2, " ml/kg/min"
-		Escribir "Clasificación (según VO2 simple): ", clasificacion
-		Escribir "------------------------------"
-		Escribir ""
-
-		suma_VO2_simple <- suma_VO2_simple + VO2_simple
-		suma_VO2_leger <- suma_VO2_leger + VO2_leger
-	FinPara
-
-	Escribir "===================================="
-	Escribir "Resultados grupales (10 participantes):"
-	Escribir "Promedio VO2 simple: ", (suma_VO2_simple / 10):0:2, " ml/kg/min"
-	Escribir "Promedio VO2 Léger: ", (suma_VO2_leger / 10):0:2, " ml/kg/min"
-	Escribir "===================================="
-
+		Escribir "Velocidad final (V): ", Trunc(V*100)/100, " km/h"
+			Escribir "VO2 simple: ", Trunc(VO2_simple*100)/100, " ml/kg/min"
+				Escribir "VO2 Léger: ", Trunc(VO2_leger*100)/100, " ml/kg/min"
+					Escribir "Clasificación (según VO2 simple): ", clasificacion
+					Escribir "------------------------------"
+					Escribir ""
+					
+					suma_VO2_simple <- suma_VO2_simple + VO2_simple
+					suma_VO2_leger <- suma_VO2_leger + VO2_leger
+				FinPara
+				
+				Escribir "===================================="
+				Escribir "Resultados grupales (10 participantes):"
+				Escribir "Promedio VO2 simple: ", Trunc((suma_VO2_simple / 10)*100)/100, " ml/kg/min"
+				Escribir "Promedio VO2 Léger: ", Trunc((suma_VO2_leger / 10)*100)/100, " ml/kg/min"
+						Escribir "===================================="
+						
 FinAlgoritmo
