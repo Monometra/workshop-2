@@ -1,4 +1,4 @@
-Algoritmo TestNavette_VO2
+Algoritmo TestNavette
 	// Programa para 10 participantes - 20 m como se espicifico en el archivo subido por el profesor
 
 	Definir nombre Como Caracter
