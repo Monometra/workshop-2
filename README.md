@@ -75,7 +75,7 @@ Promedio VO2 Léger: 43.21 ml/kg/min
 
 ## Estructura básica del programa
 
-```pseudocode
+```pse
 Para i ← 1 Hasta 10 Hacer
     Leer nombre, edad, nivel, shuttle
     Validar datos
