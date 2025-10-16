@@ -21,8 +21,8 @@
    V = 8 + 0.5 * L
    ```
    
-   > [!NOTE]  
-   > Esta fórmula aproxima la velocidad final alcanzada según el nivel completado del test.
+> [!NOTE]
+> Esta fórmula aproxima la velocidad final alcanzada según el nivel completado del test.
    
 
 4. **Calcula dos tipos de VO₂ máx:**
